@@ -1,0 +1,39 @@
+.client__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.client__item {
+  height: 92px;
+  width: calc((100% - 30px) / 2);
+
+  @include breakpoint($tablet) {
+    width: calc((100% - 60px) / 3);
+  }
+
+  @include breakpoint($desktop) {
+    width: calc((100% - 150px) / 6);
+  }
+}
+
+.client__link {
+  @include centeredFlex();
+  height: 100%;
+  color: #afb1b8;
+  @include bordered(#afb1b8);
+  border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+}
+
+.client__icon {
+  fill: currentColor;
+}

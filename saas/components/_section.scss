@@ -1,0 +1,39 @@
+.section {
+  padding: 94px 0;
+
+  @media screen and (max-width: 1199px) {
+    padding: 60px 0;
+  }
+
+  &:nth-child(3) {
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
+  }
+}
+
+.section__title {
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.17;
+  color: $secondary-text-color;
+  text-align: center;
+
+  @include breakpoint($desktop) {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+}
+
+.section--info {
+  padding-bottom: 60px;
+
+  @include breakpoint($desktop) {
+    padding-bottom: 0;
+  }
+}
+
+.section--team {
+  background-color: $secondary-bg-color;
+}
